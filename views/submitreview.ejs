@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+<main class="container" style="min-height: 100vh;">
+<h1 style="padding-top: 15px;">Compose Review</h1>
+
+<form class="" action="/submitreview" method="post">
+  <div style="padding-bottom: 10px;" class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" name="postTitle">
+    <label>Post</label>
+    <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+    <label>Website link</label>
+    <input class="form-control" type="text" name="postLink">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Publish</button>
+</form>
+</main>
+<%- include("partials/footer"); -%>
