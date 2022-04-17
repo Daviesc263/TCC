@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+      <main class="container" style="min-height: 100vh;">
+        <div class="front">
+          <div class="banner p-4 p-md-5 mb-4 rounded bg-gradient">
+  
+          <div class="col-12 px-0">
+            <h1 class="display-4">Campsite Reviews</h1>
+            <p class="lead my-3">A little info on some of the places we've stayed at in the past</p>
+          </div>
+         
+        </div>
+        
+        <div class="col-md-8">
+            
+            <%  reviews.forEach(function(review){ %>
+
+              <h1><%=review.title%></h1>
+              <p><%=review.link%></p>
+              <p>
+              <%=review.content.substring(0, 100) + " ..."%>
+              <a href="/reviews/<%=review._id%>">Read More</a>
+              </p>
+              
+          
+          
+              <% }) %>
+          </div>
+        </div>
+        
+      </main>
+      <%- include("partials/footer"); -%>
